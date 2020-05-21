@@ -41,37 +41,37 @@ function checkRequired(inputArr) {
       showSuccess(input);
     }
   });
+}
 
-  // checks min and max length entered by user
+// checks min and max length entered by user
 
-  function checkLength(input, min, max) {
-    if (input.value.length < min) {
-      showError(
-        input,
-        `${getFieldName(input)} must be at least ${min} char length`
-      );
-    } else if (input.value.length > max) {
-      showError(
-        input,
-        `${getFieldName(input)} must be less than ${max} char length`
-      );
-    } else {
-      showSuccess(input);
-    }
+function checkLength(input, min, max) {
+  if (input.value.length < min) {
+    showError(
+      input,
+      `${getFieldName(input)} must be at least ${min} char length`
+    );
+  } else if (input.value.length > max) {
+    showError(
+      input,
+      `${getFieldName(input)} must be less than ${max} char length`
+    );
+  } else {
+    showSuccess(input);
   }
+}
 
-  function checkPasswordMatch(input1, input2){
-    if(input1.value !== input2.value){
-      // show the error in second field
-      showError(input2, 'password didnt match ');
-    }
+function checkPasswordMatch(input1, input2) {
+  if (input1.value !== input2.value) {
+    // show the error in second field
+    showError(input2, "password didnt match ");
   }
-  // function returns the id of the element with first
-  // character capital
-  function getFieldName(input) {
-    // convert first char capital, add remaining char later
-    return input.id.charAt(0).toUpperCase() + input.id.slice(1);
-  }
+}
+// function returns the id of the element with first
+// character capital
+function getFieldName(input) {
+  // convert first char capital, add remaining char later
+  return input.id.charAt(0).toUpperCase() + input.id.slice(1);
 }
 
 //listen for submit
