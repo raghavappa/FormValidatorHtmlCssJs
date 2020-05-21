@@ -1,0 +1,29 @@
+<!--This is the sample code of embedding Cisco team widget in your browser App-->
+<!-- This i got from Cisco website https://developer.webex.com/docs/widgets-->
+<html>
+  <head>
+    <meta charset="utf8" />
+    <title>Space Widget Demo</title>
+    <script src="https://code.s4d.io/widget-space/production/bundle.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://code.s4d.io/widget-space/production/main.css"
+    />
+  </head>
+  <body>
+    <div id="my-webexteams-widget" style="width: 500px; height: 500px;" />
+    <script>
+      var widgetEl = document.getElementById("my-webexteams-widget");
+      // Init a new widget
+      webex.widget(widgetEl).spaceWidget({
+        accessToken:
+          "ZjNhYWUzYmQtMTdmMi00YWVlLWE3MzgtZmUwNTliZjkyNzI3NGUwZGU1NGQtMmU5_PF84_1eb65fdf-9643-417f-9974-ad72cae0e10f",
+        destinationId: "nikkuma4@cisco.com",
+        destinationType: "email",
+        activities: { files: false, meet: true, message: false, people: true },
+        initialActivity: "meet",
+        secondaryActivitiesFullWidth: false,
+      });
+    </script>
+  </body>
+</html>

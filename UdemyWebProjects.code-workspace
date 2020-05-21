@@ -1,0 +1,13 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "FORM-VALIDATOR"
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "UdemyWebProjectsCourse"
+  }
+}

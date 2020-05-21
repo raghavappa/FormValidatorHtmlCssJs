@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
+/* variable declared for root scope */
+:root {
+  --success-color: #2ecc71;
+  --error-color: #e74c3c;
+}
+/*If you set box-sizing: border-box; on an element, padding and border are included in the width and height:*/
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #f9fafb;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Height in percentage w.r.t total viewport height */
+
+  min-height: 100vh;
+
+  margin: 0;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0.3);
+  width: 400px;
+}
+
+h2 {
+  text-align: center;
+  margin: 0 0 20px;
+}
+
+.form {
+  /* pading top bottom left right */
+  padding: 30px 40px;
+}
+
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.form-control label {
+  color: #777;
+  /*block
+The element generates a block element box,
+ generating line breaks both before 
+ and after the element when in the normal flow.*/
+  display: block;
+  margin-bottom: 5px;
+}
+.form-control input {
+  border: 2px solid #e6dddd;
+  border-radius: 4px;
+  display: block;
+  /* strech all the way across container */
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* we don't want outline around the input boxes on foucs */
+
+.form-control input:focus {
+  outline: 0;
+  border-color: #777;
+}
+
+.form-control.success input {
+  border-color: var(--success-color);
+}
+
+.form-control.error input {
+  border-color: var(--error-color);
+}
+
+.form-control small {
+  color: var(--error-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /* there is difference between visibility hidden and dispaly none*/
+  /* dispaly none will collapse any thing around it */
+  visibility: hidden;
+}
+
+/* change visibility */
+/* Java script will error class if some thing goes wrong */
+.form-control.error small {
+  visibility: visible;
+}
+
+/* style button */
+.form button {
+  cursor: pointer;
+  background-color: #3498db;
+  border: 2px solid #3498db;
+  border-radius: 4px;
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  margin-top: 20px;
+  width: 100%;
+}
